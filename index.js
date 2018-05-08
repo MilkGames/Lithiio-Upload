@@ -1,19 +1,8 @@
 "use strict";
 var request = require('request');
 exports.fetchAPIKey = function(email, password) {
-  var options = {
-    method: 'POST',
-    url: 'https://lithi.io/api/v1/fetch-api-key.php',
-    headers: {
-      'content-type': 'multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW'
-    },
-    formData: {
-      email: email,
-      password: password
-    }
-  };
   return new Promise((resolve, reject) => {
-    request(options, function(error, response, body) {
+    var req = request.post('https://lithi.io/api/v1/fetch-api-key.php', function(error, response, body) {
       if (error) throw new Error(error);
       if (JSON.parse(body).apikey) {
         resolve(JSON.parse(body).apikey);
@@ -21,6 +10,9 @@ exports.fetchAPIKey = function(email, password) {
         reject(JSON.parse(body).error);
       }
     });
+    var form = req.form();
+    form.append('email', email);
+    form.append('password', password);
   })
 }
 exports.upload = function(apikey, data) {

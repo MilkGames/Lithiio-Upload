@@ -1,4 +1,4 @@
-# Lithiio-Upload
+# node-lithiio-upload
 Node module to fetch API key for Lithiio and upload to Lithiio.
 
 ## Installation
@@ -7,4 +7,4 @@ Node module to fetch API key for Lithiio and upload to Lithiio.
 
 ## Usage
 
-Please refer to the [wiki](https://github.com/MilkGames/Lithiio-Upload/wiki).
+Please refer to the [wiki](https://github.com/MilkGames/node-lithiio-upload/wiki).
