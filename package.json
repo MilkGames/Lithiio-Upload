@@ -1,0 +1,30 @@
+{
+  "name": "node-lithiio-upload",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MilkGames/node-lithiio-upload.git"
+  },
+  "keywords": [
+    "lithiio",
+    "lithi.io",
+    "upload",
+    "uploading",
+    "file",
+    "files"
+  ],
+  "author": "MilkGames",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MilkGames/node-lithiio-upload/issues"
+  },
+  "homepage": "https://github.com/MilkGames/node-lithiio-upload#readme",
+  "dependencies": {
+    "request": "^2.85.0"
+  }
+}
