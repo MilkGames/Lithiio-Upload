@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/MilkGames/node-lithiio-upload#readme",
   "dependencies": {
-    "request": "^2.87.0"
+    "request": "^2.85.0"
   }
 }
