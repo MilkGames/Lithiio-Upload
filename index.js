@@ -34,4 +34,10 @@ exports.upload = function(apikey, data) {
   form.append('key', apikey);
   form.append('file', data);
   return Emitter;
-};
+}
+
+exports.cancel = function(upload) {
+  if (upload !== undefined)
+  upload.emit('error', 'Canceled');
+  upload.removeAllListeners();;
+}
