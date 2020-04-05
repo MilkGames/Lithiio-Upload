@@ -6,8 +6,8 @@ exports.fetchAPIKey = function(email, password) {
   let Emitter = new events;
   let req = request.post('https://lithi.io/api/v2/fetch-api-key', function(error, response, body) {
     if (error) throw new Error(error);
-    if (JSON.parse(body).apikey) {
-      Emitter.emit('success', JSON.parse(body).apikey);
+    if (JSON.parse(body).success) {
+      Emitter.emit('success', JSON.parse(body).api_key);
     } else {
       Emitter.emit('error', JSON.parse(body).error);
     }
